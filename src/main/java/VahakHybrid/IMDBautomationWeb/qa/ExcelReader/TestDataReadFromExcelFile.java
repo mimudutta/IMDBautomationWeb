@@ -8,8 +8,6 @@ import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
-import org.openqa.selenium.JavascriptExecutor;
-//import org.openqa.selenium.JavascriptExecutor;
 
 public class TestDataReadFromExcelFile {
 	
@@ -18,9 +16,6 @@ public class TestDataReadFromExcelFile {
 
 	static Workbook imdbBook;
 	static Sheet imdbSheet;
-	//static JavascriptExecutor js;
-
-	
 	
 	public static Object[][] getTestData(String sheetName) throws InvalidFormatException {
 		FileInputStream file = null;
@@ -35,16 +30,12 @@ public class TestDataReadFromExcelFile {
 			e.printStackTrace();
 		}
 		
-		//suppose there are 4 rows in as sheet, then sheet.getLastRowNum() will return 4
-		//and sheet.getRow(0).getLastCellNum() will return last column, say if 3 column, it will return 3
 		imdbSheet = imdbBook.getSheet(sheetName);
 		System.out.println(imdbSheet.getLastRowNum() + "--------" +
 				 imdbSheet.getRow(imdbSheet.getLastRowNum()).getLastCellNum());
 		Object[][] data = new Object[imdbSheet.getLastRowNum()][imdbSheet.getRow(0).getLastCellNum()];
 		 
 		
-		
-		//itterating in the matric, i=LastRows, k=LastColumns
 		for (int i = 0; i < imdbSheet.getLastRowNum(); i++) {
 			for (int k = 0; k < imdbSheet.getRow(0).getLastCellNum(); k++) {
 				data[i][k] = imdbSheet.getRow(i + 1).getCell(k).toString();

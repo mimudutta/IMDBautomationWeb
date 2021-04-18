@@ -49,13 +49,14 @@ public class TestBase {
 
 
 	public static void initialization() {
+		//System.out.println(properties.getProperty("browser"));
 		String browserName=properties.getProperty("browser");
-		if(browserName.equalsIgnoreCase("chrome")) {
-			WebDriverManager.chromedriver().setup(); 
-			driver= new ChromeDriver();		
-		}
+			if(browserName.equalsIgnoreCase("chrome")) {
+				WebDriverManager.chromedriver().setup(); 
+				driver= new ChromeDriver();
+			}
 		
-		else if(browserName.equalsIgnoreCase("Chromeheadless")) {
+			else  {
 			WebDriverManager.chromedriver().setup(); 
 			ChromeOptions options=new ChromeOptions();
 			options.addArguments("window-size=1400,800");
@@ -77,8 +78,6 @@ public class TestBase {
 		driver.get(properties.getProperty("URL"));	
 	}
 	
-		
-
 }
 
 

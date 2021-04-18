@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="VahakHybrid.IMDBautomationWeb.qa.TestSuite.LoginPageTest">
+      <class name="VahakHybrid.IMDBautomationWeb.qa.TestSuite.LastMovieReleaseDetailPageTest">
         <methods>
-          <include name="setup"/>
+          <include name="getallReleaseDetails" invocation-numbers="0"/>
           <include name="tearDown"/>
-          <include name="testLogin"/>
+          <include name="setup"/>
         </methods>
-      </class> <!-- VahakHybrid.IMDBautomationWeb.qa.TestSuite.LoginPageTest -->
+      </class> <!-- VahakHybrid.IMDBautomationWeb.qa.TestSuite.LastMovieReleaseDetailPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

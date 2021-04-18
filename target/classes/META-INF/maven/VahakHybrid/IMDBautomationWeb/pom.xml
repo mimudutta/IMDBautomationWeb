@@ -68,7 +68,7 @@
 	<dependency>
 	    <groupId>io.github.bonigarcia</groupId>
 	    <artifactId>webdrivermanager</artifactId>
-	    <version>4.3.1</version>
+	    <version>4.4.0</version>
 	    <scope>compile</scope>
 	</dependency>
 	
@@ -179,7 +179,7 @@
 				<configuration>
 					<!-- Suite testng xml file to consider for test execution -->
 					<suiteXmlFiles>
-						<suiteXmlFile>testng_regression.xml</suiteXmlFile>
+						<suiteXmlFile>testng.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
